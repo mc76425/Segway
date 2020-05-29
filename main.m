@@ -5,7 +5,7 @@ m = 0.5;
 M = 0.5;
 g = 9.81;
 T = 0;
-F = 1;
+F = 0;
 
 %J'ai dû merder mes matrices; ça marche pas
 A = [0 0 (m+M)/(M*l^2)*l*g 0;
@@ -20,5 +20,5 @@ B = [(l*F + T/m*(M+m))/(M*l^2);
 %Pole placement
 %Test
 Mc = ctrb(A,B); rank(Mc);
-desiredPoles = [-1,-2,-3,-4]; %choix aléatoire pour l'instant
-K = place(A, B, desiredPoles)
+desiredPoles = [-1,-1,-1,-1];
+K = acker(A, B, desiredPoles)
