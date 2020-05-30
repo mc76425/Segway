@@ -8,14 +8,14 @@ T = 0;
 F = 0;
 
 %J'ai dû merder mes matrices; ça marche pas
-A = [0 0 (m+M)/(M*l^2)*l*g 0;
-    0 0 (M+m)/M 0;
+A = [0 0 (m*g)/M 0;
+    0 0 ((M+m)*g)/(M*l) 0;
     1 0 0 0;
     0 1 0 0]
 
-B = [(l*F + T/m*(M+m))/(M*l^2);
-    (T/l + F)/M;
-    0
+B = [1/M;
+    1/(M*l);
+    0;
     0]
 %Pole placement
 %Test
